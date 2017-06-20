@@ -355,6 +355,7 @@ p
 	flex-direction: column
 	width: 765px
 	margin: 0 auto 20px
+	
 
 .section__title-icon-wrapper
 	display: flex
@@ -513,7 +514,19 @@ p
 	width: 100%
 
 .section_4
-	height: 5500px
+	height: 1800px
+
+.seo
+	z-index: 10
+	height: 1734px
+
+.seo-background
+	position: absolute
+	background: #f0feff
+	top: 405px
+	left: 0
+	width: 100%
+	height: 1395px
 
 .seo__catalog
 	position: absolute
@@ -556,7 +569,8 @@ p
 	color: #334050
 	top: 185px
 	left: 0
-	
+	z-index: 10
+
 .seo__descr-small-text
 	position: absolute
 	font-size: 15px
@@ -570,13 +584,13 @@ p
 	top: 567px
 	left: 626px
 
-.seo__work-catalog-title
+.small-title
 	font-size: 28px
 	color: #000
 	font-weight: 300
 	margin-bottom: 18px
 
-.seo__work-catalog-text
+.default-text
 	font-size: 17px
 	font-weight: 300
 	color: #000
@@ -584,7 +598,7 @@ p
 		margin-bottom: 22px
 		line-height: 1.4
 
-.seo__work-catalog-list
+.default-list
 	margin-top: -2px
 	list-style-type: none
 	padding: 0
@@ -622,3 +636,94 @@ p
 		a
 			&:hover
 				color: #00b6bd
+
+.default-link
+	font-style: normal
+	color: #4b79bb
+	text-decoration: underline
+
+.arrow
+	font-family: "PT Sans"
+	position: absolute
+	font-size: 13px
+	font-style: italic
+	text-align: center
+	font-weight: 100
+	color: #65b3ba
+
+.arrow_1
+	top: 1126px
+	left: 116px
+	&::after
+		position: absolute
+		content: ''
+		top: -15px
+		right: -20px
+
+.arrow_2
+	top: 1149px
+	left: 626px
+	&::after
+		position: absolute
+		content: ''
+		top: 15px
+		left: -50px
+
+.arrow_3
+	top: 3px
+	left: 607px
+	&::after
+		position: absolute
+		content: ''
+		top: 5px
+		left: -60px
+		
+.seo-table
+	position: absolute
+	background: url("../images/seo-table.png") no-repeat
+	width: 941px
+	height: 541px
+	top: 1200px
+	left: 60px
+
+.section_5
+	height: 2320px
+	
+.technical-changes
+	position: relative
+	display: flex
+	flex-direction: column
+	width: 452px
+	margin-top: 44px
+	margin-left: 17px
+
+	.default-list
+		margin-bottom: 30px
+
+	.small-title
+		margin-bottom: 23px
+
+.work-with-content
+	position: relative
+	display: flex
+	flex-direction: column
+	width: 390px
+	margin-top: 44px
+	margin-right: 14px
+
+	.small-title
+		margin-bottom: 23px
+
+	.default-list
+		margin-bottom: 29px
+
+.flex
+	display: flex
+
+.justify-space-beetween
+	justify-content: space-between
+
+.section-articles
+	position: absolute
+	width: 100%
+	top: 540px
