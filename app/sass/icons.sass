@@ -2,6 +2,9 @@
 	display: inline-block
 	vertical-align: middle
 
+.fri-logo
+	+sprite(logo)
+
 .fri-arrow-dark
 	+sprite(arrow-dark)
 
@@ -40,4 +43,17 @@
 .arrow_3
 	&::after
 		+sprite(arrow-2)
+
+.chistovie-wrapper
+
+	.pagenavi .pagenavi__post.is-left a
+		&:hover
+			&::before
+				+sprite(arrow-left-blue)
+
+	.pagenavi .pagenavi__post.is-right a
+		&:hover
+			&::before
+				transform: rotate(180deg)
+				+sprite(arrow-left-blue)
 

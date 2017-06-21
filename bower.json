@@ -4,6 +4,8 @@
   "description": "Gulp project builder",
   "author": "qube.kz",
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "wow": "wow-mit#^1.3.0",
+    "animate.css": "^3.5.2"
   }
 }

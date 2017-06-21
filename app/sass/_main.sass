@@ -22,12 +22,10 @@ p
 	line-height: 1
 
 .chistovie-wrapper
-	width: 100%
-	position: relative
-	z-index: 10
 	display: flex
 	flex-direction: column
-	overflow: hidden
+	height: 100%
+	min-width: 1200px
 
 .container
 	position: relative
@@ -641,6 +639,9 @@ p
 	font-style: normal
 	color: #4b79bb
 	text-decoration: underline
+	&:hover
+		color: #4b79bb
+		text-decoration: none
 
 .arrow
 	font-family: "PT Sans"
@@ -651,27 +652,47 @@ p
 	font-weight: 100
 	color: #65b3ba
 
-.arrow_1
+.arrow-wrapper-1
+	position: absolute
 	top: 1126px
 	left: 116px
+
+.arrow_1
+	//top: 1126px
+	//left: 116px
+	position: relative
 	&::after
 		position: absolute
 		content: ''
 		top: -15px
 		right: -20px
 
-.arrow_2
+.arrow-wrapper-2
+	position: absolute
 	top: 1149px
 	left: 626px
+
+.arrow_2
+	//top: 1149px
+	//left: 626px
+	position: relative
 	&::after
 		position: absolute
 		content: ''
 		top: 15px
 		left: -50px
 
-.arrow_3
-	top: 3px
+.arrow-wrapper-3
+	position: absolute
+	top: 0
 	left: 607px
+
+.arrow_3
+	//top: 0
+	//left: 607px
+	position: relative
+	text-align: left
+	z-index: 100
 	&::after
 		position: absolute
 		content: ''
@@ -724,6 +745,457 @@ p
 	justify-content: space-between
 
 .section-articles
-	position: absolute
+	position: relative
 	width: 100%
-	top: 540px
+	margin-top: -295px
+	
+.articles-images
+	position: relative
+	height: 1000px
+	
+.articles-image__1
+	position: absolute
+	width: 462px
+	height: 934px
+	background: url('../images/articles-image-1.png') no-repeat
+	left: 533px
+	top: 72px
+
+.articles-image__2
+	position: absolute
+	background: url("../images/articles-image-2.png") no-repeat
+	width: 504px
+	height: 414px
+	top: 313px
+	left: 120px
+	z-index: 10
+
+.articles-image__3
+	position: absolute
+	background: url("../images/articles-image-3.png") no-repeat
+	width: 504px
+	height: 325px
+	top: 693px
+	left: 118px
+	z-index: 10
+	
+.section_6
+	position: relative
+	background-color: #fafbfb
+	margin-top: -95px
+	padding-bottom: 30px
+
+	.flex
+		margin-top: 182px
+
+.articles-image__4
+	flex-shrink: 0
+	background: url("../images/articles-image-4.png") no-repeat
+	width: 615px
+	height: 663px
+	margin-left: -32px
+	margin-right: 22px
+	z-index: 10
+
+.re-linking
+	margin-top: 18px
+	flex-grow: 1
+	flex-shrink: 0
+	flex-basis: 0
+
+	.small-title
+		margin-bottom: 36px
+
+	.default-text
+		line-height: 1.4
+		margin-bottom: 10px
+
+.re-linking__title-blue
+	font-size: 28px
+	font-weight: 300
+	color: #00b1b8
+	margin-bottom: 10px
+
+.articles-blur__1
+	position: absolute
+	background: url("../images/articles-blur-1.png") no-repeat
+	width: 292px
+	height: 303px
+	top: 239px
+	left: -110px
+
+.articles-blur__2
+	position: absolute
+	background: url("../images/articles-blur-2.png") no-repeat
+	width: 315px
+	height: 303px
+	top: 660px
+	right: -334px
+
+.section_7
+	padding-top: 73px
+	padding-bottom: 120px
+
+	.small-title
+		margin-bottom: 20px
+		z-index: 10
+
+	.default-text
+		line-height: 1.4
+		z-index: 10
+
+	.flex
+		justify-content: center
+		z-index: 10
+
+.map
+	position: absolute
+	background: url("../images/map.png") no-repeat
+	width: 495px
+	height: 274px
+	top: 80px
+	left: 280px
+	z-index: -1
+
+.section-7-wrapper
+	z-index: 10
+
+.text-center
+	text-align: center
+	
+.city
+	padding: 0 20px
+	height: 42px
+	background: #00b6be
+	color: #FFFFFF
+	margin-right: 25px
+	border-radius: 20px
+	display: flex
+	justify-content: center
+	align-items: center
+	min-width: 110px
+	z-index: 10
+	&:last-child
+		margin-right: 0
+
+.other-works-image
+	background: url("../images/other-works-image.png") no-repeat
+	width: 437px
+	height: 280px
+
+.external-optimization
+	margin-left: 10px
+	width: 440px
+	flex-shrink: 0
+	margin-right: 110px
+
+	.small-title
+		margin-bottom: 23px
+
+	.default-text
+		margin-bottom: 23px
+		line-height: 1.4
+
+.other-works
+	width: 390px
+	flex-shrink: 0
+
+	.small-title
+		margin-bottom: 24px
+
+.section_9
+	padding-top: 100px
+	padding-bottom: 50px
+
+	.section__title
+		margin-bottom: 30px
+
+	.flex
+		width: 780px
+		margin: 0 auto
+
+		.default-list
+			width: 290px
+			margin-right: 140px
+			&:last-child
+				margin-right: 0
+			li
+				margin-bottom: 20px
+		
+.section_10
+	padding-top: 66px
+	background-color: #f3feff
+	padding-bottom: 50px
+
+.section__title-text_results
+	font-size: 60px
+	font-weight: 100
+	line-height: 1
+	width: 100%
+
+.results
+	background: url("../images/results.png") no-repeat
+	width: 909px
+	height: 580px
+	margin: 104px 50px 50px
+
+.traffic
+	position: absolute
+	top: 310px
+
+.traffic__bigger-circle
+	background: #FFFFFF
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 217px
+	height: 217px
+	border-radius: 50%
+
+.traffic__big-circle
+	position: relative
+	background-color: #64aed6
+	width: 207px
+	height: 207px
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 50%
+	&::after
+		position: absolute
+		content: ""
+		width: 22px
+		height: 2px
+		background-color: #64aed6
+		top: 50%
+		right: -22px
+		transform: translateY(-50%)
+	&::before
+		position: absolute
+		content: ""
+		width: 10px
+		height: 10px
+		border-radius: 50%
+		background-color: #64aed6
+		top: 50%
+		transform: translateY(-50%)
+		right: -32px
+
+
+.traffic__medium-circle
+	width: 155px
+	height: 155px
+	background-color: #4e8dae
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 50%
+
+.traffic__small-circle
+	width: 101px
+	height: 101px
+	background-color: #FFFFFF
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	border-radius: 50%
+	
+.traffic__count
+	font-size: 36px
+	color: #4e8dae
+	line-height: 1
+
+.traffic__text
+	font-size: 15px
+	color: #4e8dae
+	line-height: 1
+	font-weight: normal
+
+.traffic__descr
+	font-size: 15px
+	color: #262424
+	position: absolute
+	width: 95px
+	top: 80px
+	left: 260px
+	line-height: 1.1
+
+.orders
+	position: absolute
+	top: 410px
+	right: 230px
+
+.orders__bigger-circle
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 50%
+	background-color: #FFFFFF
+	width: 174px
+	height: 174px
+	
+
+.orders__big-circle
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 50%
+	background-color: #17c6cd
+	width: 165px
+	height: 165px
+	&::after
+		position: absolute
+		content: ""
+		width: 22px
+		height: 2px
+		background-color: #17c6cd
+		top: 50%
+		left: -18px
+		transform: translateY(-50%)
+	&::before
+		position: absolute
+		content: ""
+		width: 10px
+		height: 10px
+		border-radius: 50%
+		background-color: #17c6cd
+		top: 50%
+		transform: translateY(-50%)
+		left: -28px
+
+.orders__medium-circle
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 50%
+	background-color: #039fa5
+	width: 123px
+	height: 123px
+
+.orders__small-circle
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	border-radius: 50%
+	background-color: #fff
+	width: 81px
+	height: 81px
+
+.orders__count
+	font-size: 36px
+	font-weight: 300
+	line-height: 1
+	color: #039fa5
+
+.orders__text
+	font-size: 15px
+	font-weight: normal
+	line-height: 1
+	color: #039fa5
+
+.orders__descr
+	font-size: 15px
+	color: #262424
+	position: absolute
+	line-height: 1.1
+	top: 70px
+	text-align: right
+	left: -160px
+	width: 120px
+
+.chistovie-wrapper
+	.nav-white .nav__menu .nav__menu__contacts .btn
+		font-family: "Bello Pro"
+		&:hover
+			color: #FFFFFF
+			background-color: #00b6bd
+			border-color: #00b6bd
+
+	.nav-white .nav__back a
+		&:hover
+			color: #00b6bd
+
+	.nav-white
+		height: 113px
+		position: absolute
+
+	.pagenavi .pagenavi__post a .pagenavi__cell
+		font-family: "HelveticaNeueCyr", Helvetica
+		font-size: 16px
+		font-weight: 300
+		padding: 0 50px
+
+	.pagenavi .pagenavi__post a
+		color: #000
+		&:hover
+			border-color: #00b6bd
+			color: #00b6bd
+
+	.link_site
+		text-align: center
+
+	.pagenavi
+		padding-top: 0
+		padding-bottom: 80px
+
+	.main_btn
+		font-family: "Bello Pro"
+		display: inline-block
+		font-size: 20px
+		color: #FFFFFF
+		border: 2px solid #00b6bd
+		background-color: #00b6bd
+		padding: 5px 30px
+		&:hover
+			text-decoration: none
+			color: #00b6bd
+			background-color: #fff
+			border-color: #00b6bd
+	.feedback
+		padding-top: 90px
+		padding-bottom: 107px
+
+	.feedback .feedback__desktop p,
+	.feedback .feedback__desktop a,
+	.feedback__name
+		font-family: "HelveticaNeueCyr", HelveticaNeueCyr
+
+	.feedback__name
+		font-weight: 200
+		margin-bottom: 50px
+
+	.feedback .feedback__email .form-group .btn
+		font-family: "Bello Pro"
+		border-radius: 0
+		height: auto
+		background-color: transparent
+		font-size: 28px
+		color: #464646
+		border: 3px solid #464646
+		padding-top: 11px
+		padding-bottom: 11px
+		&:hover
+			background-color: #00b6bd
+			border-color: #00b6bd
+			color: #FFFFFF
+
+	.vista
+		background-color: #00b6bd
+		padding-top: 75px
+		padding-bottom: 100px
+
+	.vista,
+	.vista__name,
+	.vista p,
+	.vista span
+		font-family: "HelveticaNeueCyr", HelveticaNeueCyr
+		color: #000
+
+	.section__space b
+		background-color: #00b6bd
+
+	.contacts
+		background-image: url("../images/background.jpg")
+		background-size: cover

@@ -7,13 +7,13 @@ Error: Undefined mixin 'sprite'.
 2: 	display: inline-block
 3: 	vertical-align: middle
 4: 
-5: .fri-arrow-dark
-6: 	+sprite(arrow-dark)
+5: .fri-logo
+6: 	+sprite(logo)
 7: 
-8: .nav__back
-9: 	> a
-10: 		&:hover
-11: 			.fri-arrow-dark
+8: .fri-arrow-dark
+9: 	+sprite(arrow-dark)
+10: 
+11: .nav__back
 
 Backtrace:
 D:/dev/chistovie/app/sass/icons.sass:6:in `sprite'
@@ -72,4 +72,4 @@ C:/Ruby23-x64/bin/compass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'sprite'.\A         on line 6 of D:/dev/chistovie/app/sass/icons.sass, in `sprite'\A         from line 6 of D:/dev/chistovie/app/sass/icons.sass\A \A 1: .fri\A 2: 	display: inline-block\A 3: 	vertical-align: middle\A 4: \A 5: .fri-arrow-dark\A 6: 	+sprite(arrow-dark)\A 7: \A 8: .nav__back\A 9: 	> a\A 10: 		&:hover\A 11: 			.fri-arrow-dark"; }
+  content: "Error: Undefined mixin 'sprite'.\A         on line 6 of D:/dev/chistovie/app/sass/icons.sass, in `sprite'\A         from line 6 of D:/dev/chistovie/app/sass/icons.sass\A \A 1: .fri\A 2: 	display: inline-block\A 3: 	vertical-align: middle\A 4: \A 5: .fri-logo\A 6: 	+sprite(logo)\A 7: \A 8: .fri-arrow-dark\A 9: 	+sprite(arrow-dark)\A 10: \A 11: .nav__back"; }
