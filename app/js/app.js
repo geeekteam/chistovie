@@ -157,7 +157,8 @@
         if (start != -1) {
             try {
                 options = _self.str2json(string.substr(start));
-            } catch (e) {}
+            } catch (e) {
+            }
         }
 
         return options;
@@ -252,51 +253,137 @@
 
     /*YOURAPPNAME.prototype.wowOffset = function () {
 
-        function calcOnResize() {
-            var windowHeight = document.documentElement.clientHeight,
-                myElem = $('.jq-element'),
-                myElemWrapper = $('.jq-element-wrapper');
+     function calcOnResize() {
+     var windowHeight = document.documentElement.clientHeight,
+     myElem = $('.jq-element'),
+     myElemWrapper = $('.jq-element-wrapper');
 
 
-            myElem.each(function () {
-                var $this = $(this),
-                    elemWrapper = $(this).closest(myElemWrapper),
-                    dataOffset;
-                if ($this.attr('data-element') === elemWrapper.attr('data-element-container')) {
-                    dataOffset = windowHeight - ($this.offset().top - elemWrapper.offset().top);
-                    $this.attr('data-wow-offset', dataOffset);
+     myElem.each(function () {
+     var $this = $(this),
+     elemWrapper = $(this).closest(myElemWrapper),
+     dataOffset;
+     if ($this.attr('data-element') === elemWrapper.attr('data-element-container')) {
+     dataOffset = windowHeight - ($this.offset().top - elemWrapper.offset().top);
+     $this.attr('data-wow-offset', dataOffset);
+     }
+     });
+     }
+
+     calcOnResize();
+     $(window).resize(function () {
+     calcOnResize();
+     })
+     };*/
+
+    YOURAPPNAME.prototype.counter = function () {
+
+        $(document).ready(function(){
+
+            function anim_text_start() {
+                $('.anim_text').each(function(){
+                    var data_text = $(this).text();
+                    $(this).attr("data-text", data_text);
+                    $(this).text(0);
+                });
+            }
+            anim_text_start();
+            from_100_to_x();
+
+            function check_pos(bl) {
+
+                if (bl.data('force-start') == true)
+                    return true;
+
+                var top_pos = bl.offset().top,
+                    wh = $(window).height(),
+                    wpos = $(window).scrollTop(),
+                    wbot = wh + wpos - wh * 0;
+                if (bl.hasClass("comprehensive_audit_item")) {
+                    wbot = wh + wpos - wh * 0.4;
                 }
+                if (wbot > top_pos) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+
+            $(window).scroll(function() {
+                from_100_to_x();
+                var wp = $(window).scrollTop();
             });
-        }
 
-        calcOnResize();
-        $(window).resize(function () {
-            calcOnResize();
+            function from_100_to_x() {
+                if (check_pos($('.seo__queries')) != true || $('.seo__queries').hasClass('animation_done__'))
+                    return;
+
+
+                $('.seo__queries').addClass('animation_done__ visible');
+
+                $('.anim_text').each(function(){
+                    var bl = $(this),
+                        start_num,
+                        timerNUMBERS,
+                        finish_num = bl.attr("data-text"),
+                        step,
+                        show_var;
+
+                    if(bl.hasClass('anim_text')) {
+                        step = 1;
+                        start_num = 0;
+                        var num = $(this).text();
+                        num = num.replace(',', '.');
+                        var delay = 3500/finish_num
+
+                    }
+
+                    bl.html(start_num);
+
+                    setTimeout(function(){
+                        timerNUMBERS = setInterval(function(){
+                            start_num += step;
+                            finish_num = finish_num - 1;
+                            show_var = start_num;
+
+                            if (finish_num == 0) {
+                                clearInterval(timerNUMBERS);
+                            }
+
+                            bl.html(show_var)
+                        }, delay)
+                    },150);
+
+                });
+            }
+
         })
-    };*/
+    };
 
-    var app = new YOURAPPNAME(document);
+        var app = new YOURAPPNAME(document);
 
-    app.appLoad('loading', function () {
-        console.log('App is loading... Paste your app code here.');
-        // App is loading... Paste your app code here. 4example u can run preloader event here and stop it in action appLoad dom or full
-    });
+        app.appLoad('loading', function () {
+            console.log('App is loading... Paste your app code here.');
+            // App is loading... Paste your app code here. 4example u can run preloader event here and stop it in action appLoad dom or full
+        });
 
-    app.appLoad('dom', function () {
-        console.log('DOM is loaded! Paste your app code here (Pure JS code).');
-        // DOM is loaded! Paste your app code here (Pure JS code).
-        // Do not use jQuery here cause external libs do not loads here...
+        app.appLoad('dom', function () {
+            console.log('DOM is loaded! Paste your app code here (Pure JS code).');
+            // DOM is loaded! Paste your app code here (Pure JS code).
+            // Do not use jQuery here cause external libs do not loads here...
 
-        // app.initSwitcher(); // data-switcher="{target: 'anything'}" , data-switcher-target="anything"
-    });
+            // app.initSwitcher(); // data-switcher="{target: 'anything'}" , data-switcher-target="anything"
+        });
 
-    app.appLoad('full', function (e) {
-        console.log('App was fully load! Paste external app source code here... For example if your use jQuery and something else');
-        // App was fully load! Paste external app source code here... 4example if your use jQuery and something else
-        // Please do not use jQuery ready state function to avoid mass calling document event trigger!
+        app.appLoad('full', function (e) {
+            console.log('App was fully load! Paste external app source code here... For example if your use jQuery and something else');
+            // App was fully load! Paste external app source code here... 4example if your use jQuery and something else
+            // Please do not use jQuery ready state function to avoid mass calling document event trigger!
 
-        new WOW().init();
-
-        // app.wowOffset();
-    });
-})();
+            new WOW().init();
+            app.counter();
+            // app.wowOffset();
+        });
+    }
+    )();
