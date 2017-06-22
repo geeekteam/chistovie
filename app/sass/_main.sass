@@ -432,23 +432,25 @@ p
 	height: 635px
 	position: relative
 	background: url("../images/targets-bg.png") no-repeat
-	background-position: 710px 85px
+	background-position: center 85px
 
 .targets
 	height: 500px
 
 .targets-grid
-	position: absolute
-	width: 100%
-	height: 100%
+	position: relative
+	display: flex
+	width: 840px
+	margin: 0 auto
+	justify-content: space-between
 
 .targets-grid__item-1, .targets-grid__item-2, .targets-grid__item-3
-	position: absolute
 	display: flex
 	flex-direction: column
 	justify-content: center
 	text-align: center
-	top: 38px
+	margin-top: 38px
+	width: 260px
 
 .targets-grid__item-1
 	left: 120px
@@ -458,8 +460,6 @@ p
 
 .targets-grid__item-3
 	left: 686px
-	.targets-grid__descr
-		padding-left: 8px
 
 .targets-grid__title
 	font-size: 38px
@@ -755,8 +755,8 @@ p
 	
 .articles-image__1
 	position: absolute
-	width: 462px
-	height: 934px
+	width: 492px
+	height: 986px
 	background: url('../images/articles-image-1.png') no-repeat
 	left: 533px
 	top: 72px
