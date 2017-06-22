@@ -212,7 +212,6 @@ p {
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
   min-width: 1200px;
 }
 
