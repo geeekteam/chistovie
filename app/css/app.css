@@ -1532,6 +1532,10 @@ p {
   width: 120px;
 }
 
+.region-text {
+  margin: 0 -50px;
+}
+
 .chistovie-wrapper .nav-white .nav__menu .nav__menu__contacts .btn {
   font-family: "Bello Pro";
 }
