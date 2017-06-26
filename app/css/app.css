@@ -282,8 +282,10 @@ p {
   left: 22px;
   width: 207px;
   height: 207px;
-  background-color: rgba(0, 111, 168, 0.6);
+  background-color: rgba(53, 157, 213, 0.7);
   border-radius: 50%;
+  background-blend-mode: multiply;
+  filter: brightness(110%);
 }
 .general-results-orders__big-circle::after {
   position: absolute;
@@ -319,6 +321,8 @@ p {
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
+  background-blend-mode: multiply;
+  filter: brightness(110%);
 }
 
 .general-results-orders__small-circle {
@@ -371,7 +375,7 @@ p {
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: rgba(0, 154, 160, 0.6);
+  background-color: rgba(23, 198, 205, 0.6);
   border-radius: 50%;
   top: 138px;
   left: 207px;
@@ -408,7 +412,7 @@ p {
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #039fa5;
+  background-color: #17c6cd;
   border-radius: 50%;
 }
 
@@ -465,6 +469,7 @@ p {
   top: 157px;
   left: 701px;
   background-color: rgba(50, 191, 110, 0.6);
+  background-blend-mode: multiply;
 }
 .general-results-google__big-circle::after {
   position: absolute;
@@ -500,6 +505,7 @@ p {
   height: 102px;
   background-color: #65af83;
   border-radius: 50%;
+  background-blend-mode: multiply;
 }
 
 .general-results-google__small-circle {
