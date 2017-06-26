@@ -283,10 +283,7 @@ p {
   left: 22px;
   width: 207px;
   height: 207px;
-  background-color: #64aed6;
-  border-radius: 50%;
-  background-blend-mode: multiply;
-  filter: brightness(110%);
+  background: url("../images/general-results-orders-big-circle.png") no-repeat;
 }
 .general-results-orders__big-circle::after {
   position: absolute;
@@ -369,15 +366,14 @@ p {
 .general-results-visitors__big-circle {
   position: absolute;
   width: 165px;
-  height: 165px;
+  height: 164px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: rgba(23, 198, 205, 0.6);
-  border-radius: 50%;
+  background: url("../images/general-results-visitors-big-circle.png") no-repeat;
   top: 138px;
   left: 207px;
 }
@@ -413,7 +409,8 @@ p {
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #17c6cd;
+  background-color: #039fa5;
+  background-blend-mode: multiply;
   border-radius: 50%;
 }
 
@@ -469,8 +466,7 @@ p {
   border-radius: 50%;
   top: 157px;
   left: 701px;
-  background-color: #7dd8a4;
-  background-blend-mode: multiply;
+  background: url("../images/general-results-google-big-circle.png") no-repeat;
 }
 .general-results-google__big-circle::after {
   position: absolute;
@@ -545,8 +541,7 @@ p {
   justify-content: center;
   width: 101px;
   height: 101px;
-  background-color: rgba(220, 92, 2, 0.7);
-  border-radius: 50%;
+  background: url("../images/general-results-yandex-big-circle.png") no-repeat;
   top: 172px;
   left: 820px;
 }
