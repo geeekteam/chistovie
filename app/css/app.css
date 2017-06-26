@@ -213,6 +213,7 @@ p {
   -ms-flex-direction: column;
   flex-direction: column;
   min-width: 1200px;
+  overflow: hidden;
 }
 
 .container {
@@ -282,7 +283,7 @@ p {
   left: 22px;
   width: 207px;
   height: 207px;
-  background-color: rgba(53, 157, 213, 0.7);
+  background-color: #64aed6;
   border-radius: 50%;
   background-blend-mode: multiply;
   filter: brightness(110%);
@@ -468,7 +469,7 @@ p {
   border-radius: 50%;
   top: 157px;
   left: 701px;
-  background-color: rgba(50, 191, 110, 0.6);
+  background-color: #7dd8a4;
   background-blend-mode: multiply;
 }
 .general-results-google__big-circle::after {
