@@ -308,7 +308,6 @@ p {
 }
 
 .general-results-orders__middle-circle {
-  position: absolute;
   width: 155px;
   height: 155px;
   background-color: #4e8dae;
@@ -324,7 +323,6 @@ p {
 }
 
 .general-results-orders__small-circle {
-  position: absolute;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -400,7 +398,6 @@ p {
 }
 
 .general-results-visitors__middle-circle {
-  position: absolute;
   width: 123px;
   height: 123px;
   display: -ms-flexbox;
@@ -415,7 +412,6 @@ p {
 }
 
 .general-results-visitors__small-circle {
-  position: absolute;
   width: 80px;
   height: 80px;
   display: -ms-flexbox;
@@ -1337,9 +1333,9 @@ p {
 }
 
 .traffic__bigger-circle {
-  background: #FFFFFF;
   display: -ms-flexbox;
   display: flex;
+  background: url("../images/traffic-bigger-circle.png") no-repeat;
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: center;
@@ -1352,7 +1348,7 @@ p {
 
 .traffic__big-circle {
   position: relative;
-  background-color: #64aed6;
+  background: url("images/traffic-big-circle.png") no-repeat;
   width: 207px;
   height: 207px;
   display: -ms-flexbox;
@@ -1450,7 +1446,7 @@ p {
   -ms-flex-pack: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: #FFFFFF;
+  background: url("../images/orders-bigger-circle.png") no-repeat;
   width: 174px;
   height: 174px;
   box-shadow: -5px 0px 40px 2px rgba(0, 0, 0, 0.16);
